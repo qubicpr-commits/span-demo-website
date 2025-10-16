@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPANCCPL Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <!-- Top Bar -->
+    <div class="top-bar">
+      <div class="top-bar-content">
+        <div class="top-left">
+          <i class="clock-icon">🕒</i>
+          <span>Monday to Friday 11 AM – 7 PM, Saturday 11 AM - 3 PM</span>
+        </div>
+        <div class="top-right">
+          <div class="contact-info">
+            <i class="phone-icon">📞</i>
+            <span>+91-12345-67890</span>
+          </div>
+          <div class="social-links">
+            <a href="https://facebook.com/spanccpl" target="_blank" aria-label="Facebook">
+              <img src="images/SML1.png" alt="Facebook" class="header-social-logo">
+            </a>
+            <a href="https://www.instagram.com/vanur_media?igsh=ZnF1MHYzdnhkbXk5" target="_blank" aria-label="Instagram">
+              <img src="https://hotelsbobby.com/wp-content/uploads/2025/04/WhatsApp-Image-2025-04-02-at-12.52.27-PM-1024x768.jpeg" alt="Instagram" class="header-social-logo">
+            </a>
+            <a href="https://linkedin.com/company/spanccpl" target="_blank" aria-label="LinkedIn">
+              <img src="images/SML3.png" alt="LinkedIn" class="header-social-logo">
+            </a>
+            <a href="https://wa.me/917978874959" target="_blank" aria-label="WhatsApp">
+              <img src="images/SML4.png" alt="WhatsApp" class="header-social-logo">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <div class="main-navbar">
+      <div class="navbar-content">
+        <div class="logo">
+          <img src="images/logo.png" alt="SPANCCPL Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="logo-text" style="display:none;">SPANCCPL</span>
+        </div>
+        
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <div class="dropdown">
+            <a href="#about" class="dropdown-toggle">About</a>
+          </div>
+          <div class="dropdown">
+            <a href="#services" class="dropdown-toggle">Services</a>
+            <div class="dropdown-menu">
+              <a href="#residential">Residential</a>
+              <a href="#commercial">Commercial</a>
+              <a href="#digital">Digital Solutions</a>
+            </div>
+          </div>
+          <a href="#contact">Contact</a>
+          <a href="#career">Career</a>
+        </nav>
+
+        <button id="bookBtn" class="book-btn">Book Appointment</button>
+        
+        <div class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-content">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <div class="mobile-dropdown">
+          <a href="#services" class="mobile-dropdown-toggle">Services</a>
+          <div class="mobile-dropdown-menu">
+            <a href="#residential">Residential</a>
+            <a href="#commercial">Commercial</a>
+            <a href="#digital">Digital Solutions</a>
+          </div>
+        </div>
+        <a href="#contact">Contact</a>
+        <a href="#career">Career</a>
+        <button class="mobile-book-btn">Book Appointment</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="hero-slider">
+    <div class="slides fade"><img src="images/hero1.jpg" alt="Hero Image 1"></div>
+    <div class="slides fade"><img src="images/hero2.jpg" alt="Hero Image 2"></div>
+    <div class="slides fade"><img src="images/hero3.jpg" alt="Hero Image 3"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section fade-in">
+    <h2>About Us</h2>
+    <div class="about-container">
+      <img src="images/about.jpg" alt="About SPANCCPL">
+      <div class="about-text">
+        <p>At SPAN CCPL Ltd., we take pride in our strong legacy of excellence, trust, and innovation. With years of experience in the real estate and digital development sector, we have built a reputation for delivering high-quality, transparent, and customer-focused solutions that redefine modern property experiences.</p>
+        
+        <p>Our journey began with a vision — to bring professionalism, technology, and reliability to the real estate industry. Over the years, we've partnered with some of the most reputed builders, agents, and property developers, helping them connect with customers through seamless digital platforms and personalized services.</p>
+        
+        <p>What sets us apart is our deep industry knowledge, strong client relationships, and our commitment to delivering results that exceed expectations. From residential and commercial property solutions to advanced digital integrations, our expert team ensures that every project reflects precision, trust, and value.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Counter Section -->
+  <section id="counter" class="counter-section slide-up">
+    <div class="counter-overlay">
+      <h2>Our Achievements</h2>
+      <p class="counter-subtitle">With a blend of modern technology, data-driven insights, and real estate expertise, SPAN CCPL continues to stand as a symbol of integrity, innovation, and excellence in the real estate domain. We don't just build connections — we build trust and long-term value for every client we serve.</p>
+      <div class="counter-container">
+        <div class="counter-box">
+          <h3 class="count" data-target="120">0</h3>
+          <span class="plus-sign">+</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="counter-box">
+          <h3 class="count" data-target="85">0</h3>
+          <span class="plus-sign">+</span>
+          <p>Happy Clients</p>
+        </div>
+        <div class="counter-box">
+          <h3 class="count" data-target="10">0</h3>
+          <span class="plus-sign">+</span>
+          <p>Years of Excellence</p>
+        </div>
+        <div class="counter-box">
+          <h3 class="count" data-target="15">0</h3>
+          <span class="plus-sign">+</span>
+          <p>Ongoing Projects</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section fade-in">
+    <h2>Our Projects</h2>
+    <div class="projects-grid">
+      <img src="images/project1.jpg" alt="Project 1">
+      <img src="images/project2.jpg" alt="Project 2">
+    </div>
+  </section>
+
+  <!-- Clients -->
+  <section id="clients" class="section slide-up">
+    <h2>Our Clients</h2>
+    <div class="clients-container">
+      <div class="clients-slider">
+        <div class="clients-slide active">
+          <img src="images/client1 (1).jpg" alt="Client 1">
+          <img src="images/client2 (1).jpg" alt="Client 2">
+          <img src="images/client3 (1).jpg" alt="Client 3">
+          <img src="images/client4 (1).jpg" alt="Client 4">
+          <img src="images/client5.jpg" alt="Client 5">
+        </div>
+        <div class="clients-slide">
+          <img src="images/client3 (1).jpg" alt="Client 3">
+          <img src="images/client4 (1).jpg" alt="Client 4">
+          <img src="images/client5.jpg" alt="Client 5">
+          <img src="images/client6.jpg" alt="Client 6">
+          <img src="images/client7.jpg" alt="Client 7">
+        </div>
+      </div>
+      <div class="clients-dots">
+        <span class="client-dot active" data-slide="0"></span>
+        <span class="client-dot" data-slide="1"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="section fade-in">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-container">
+      <div class="testimonial-slider">
+        <div class="testimonial-slide active">
+          <div class="testimonial-card">
+            <img src="images/client1 (1).jpg" alt="Client">
+            <div class="testimonial-content">
+              <p>"Excellent work and timely delivery! SPAN CCPL delivered our project on time with outstanding quality."</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <img src="images/client2 (1).jpg" alt="Client">
+            <div class="testimonial-content">
+              <p>"Professional and reliable team! They understood our vision and executed it perfectly."</p>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-card">
+            <img src="images/client3 (1).jpg" alt="Client">
+            <div class="testimonial-content">
+              <p>"Highly recommended for infrastructure projects. Amazing attention to detail and customer service."</p>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <img src="images/client4 (1).jpg" alt="Client">
+            <div class="testimonial-content">
+              <p>"Outstanding digital solutions and real estate expertise. Truly professional approach to every project."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-dots">
+        <span class="dot active" data-slide="0"></span>
+        <span class="dot" data-slide="1"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section slide-up">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <!-- Left Column - Company Info -->
+      <div class="contact-info">
+        <div class="info-card">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div class="info-content">
+              <h4>Our Address</h4>
+              <p>123 Business Plaza, Tech District<br>
+                 Bhubaneswar, Odisha - 751024<br>
+                 India</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div class="info-content">
+              <h4>Contact Number</h4>
+              <p>+91-12345-67890<br>
+                 +91-98765-43210</p>
+            </div>
+          </div>
+          
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div class="info-content">
+              <h4>Email Address</h4>
+              <p>qubicpr@gmail.com<br>
+                 contact@spanccpl.in</p>
+            </div>
+          </div>
+          
+          <div class="company-quote">
+            <p>"Building your dreams with precision, trust, and innovation. At SPAN CCPL, we transform visions into reality through expert real estate solutions and cutting-edge digital platforms."</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column - Contact Form -->
+      <div class="contact-form-wrapper">
+        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+          <!-- Web3Forms API Configuration -->
+          <input type="hidden" name="access_key" value="b49ec283-b73a-47ec-9adc-4830a1230123">
+          <input type="hidden" name="subject" value="New Contact Form Submission from SPAN CCPL Website">
+          <input type="hidden" name="from_name" value="SPAN CCPL Website">
+          <input type="hidden" name="redirect" value="https://web3forms.com/success">
+          <input type="checkbox" name="botcheck" style="display: none;">
+
+          <div class="form-group">
+            <label for="contactName">Full Name *</label>
+            <input type="text" id="contactName" name="name" required>
+            <span class="error-message" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactPhone">Phone Number *</label>
+            <input type="tel" id="contactPhone" name="phone" required>
+            <span class="error-message" id="phoneError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Email Address *</label>
+            <input type="email" id="contactEmail" name="email" required>
+            <span class="error-message" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="contactService">Service Required</label>
+            <select id="contactService" name="service">
+              <option value="">Select a service</option>
+              <option value="Architecture Design">Architecture Design</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Building Material">Building Material</option>
+              <option value="Layout Design">Layout Design</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group" id="customServiceGroup" style="display: none;">
+            <label for="customService">Please specify your requirement</label>
+            <input type="text" id="customService" name="custom_service" placeholder="Enter your custom service requirement">
+          </div>
+
+          <!-- Hidden field to combine service info -->
+          <input type="hidden" id="serviceInfo" name="service_details" value="">
+
+          <button type="submit" class="contact-submit-btn">
+            <span>Send Message</span>
+            <div class="btn-loader" style="display: none;">Sending...</div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book Appointment Modal -->
+  <div id="appointmentModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Book an Appointment</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="tel" placeholder="Phone" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left Column - Logo & Company Description -->
+      <div class="footer-left">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="SPANCCPL Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+          <span class="footer-logo-text" style="display:none;">SPANCCPL</span>
+        </div>
+        
+        <div class="company-description">
+          <p>SPAN CCPL is a leading real estate and digital development company committed to delivering innovative solutions. We transform visions into reality through expert craftsmanship and cutting-edge technology.</p>
+        </div>
+      </div>
+
+      <!-- Center Column - Contact Info -->
+      <div class="footer-center">
+        <h4>Contact Information</h4>
+        <div class="footer-contact">
+          <div class="contact-item">
+            <span class="contact-label">Address:</span>
+            <span>123 Business Plaza, Tech District, Bhubaneswar, Odisha - 751024</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Email:</span>
+            <span>info@spanccpl.in</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone:</span>
+            <span>+91-12345-67890</span>
+          </div>
+        </div>
+        
+        <!-- Social Media Icons -->
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://facebook.com/spanccpl" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <img src="images/SML1.png" alt="Facebook" class="social-logo">
+            </a>
+            <a href="https://www.instagram.com/vanur_media?igsh=ZnF1MHYzdnhkbXk5" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <img src="images/SML2.png" alt="Instagram" class="social-logo">
+            </a>
+            <a href="https://linkedin.com/company/spanccpl" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <img src="images/SML3.png" alt="LinkedIn" class="social-logo">
+            </a>
+            <a href="https://wa.me/917978874959" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <img src="images/SML4.png" alt="WhatsApp" class="social-logo">
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Column - Links -->
+      <div class="footer-right">
+        <div class="footer-links-container">
+          <div class="footer-links-column">
+            <h4>Quick Links</h4>
+            <nav class="footer-nav">
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#clients">Our Clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+          
+          <div class="footer-links-column">
+            <h4>Our Services</h4>
+            <div class="footer-services">
+              <ul>
+                <li><a href="#architecture">Architecture Design</a></li>
+                <li><a href="#realestate">Real Estate Solutions</a></li>
+                <li><a href="#building">Building Materials</a></li>
+                <li><a href="#layout">Layout Design</a></li>
+                <li><a href="#digital">Digital Solutions</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Footer Bottom - Copyright -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-container">
+        <p>&copy; 2025 TR Groups. All rights reserved. | Designed & Developed by Tushar Ram</p>
+        <div class="footer-bottom-links">
+          <a href="#privacy">Privacy Policy</a>
+          <span>|</span>
+          <a href="#terms">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Link -->
+  <a href="https://wa.me/917978874959" target="_blank" class="whatsapp-float" aria-label="Contact us on WhatsApp">
+    <img src="images/WQL.png" alt="WhatsApp Quick Link" onerror="this.src='images/whatsapp-icon.png'">
+    <div class="whatsapp-tooltip">Chat with us!</div>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

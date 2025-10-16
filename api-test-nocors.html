@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Test - No CORS Issues</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .test-methods {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .method {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        button {
+            background: #0D3B70;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background: #1e5799;
+        }
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        .info {
+            background: #d1ecf1;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+        pre {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Testing Methods</h1>
+    
+    <div class="warning">
+        <strong>⚠️ CORS Error Detected</strong><br>
+        Your API doesn't allow browser requests. Here are testing alternatives.
+    </div>
+
+    <div class="info">
+        <strong>💡 For Production:</strong> Ask your backend developer to add CORS headers to your API.
+    </div>
+
+    <div class="test-methods">
+        
+        <!-- Method 1: cURL Command -->
+        <div class="method">
+            <h3>Method 1: Test with cURL</h3>
+            <p>Copy this command and run it in your terminal:</p>
+            <pre id="curlCommand">curl -X POST https://vanurmedia.in/api/v1/leadChain/webhooks \
+-H "Content-Type: application/json" \
+-d '{
+  "firstName": "John",
+  "lastName": "Doe", 
+  "email": "test@example.com",
+  "phone": "1234567890"
+}'</pre>
+            <button onclick="copyCurl()">Copy cURL Command</button>
+        </div>
+
+        <!-- Method 2: Generate Test Data -->
+        <div class="method">
+            <h3>Method 2: Generate API Call</h3>
+            <form id="dataForm">
+                <div class="form-group">
+                    <label>First Name:</label>
+                    <input type="text" id="firstName" value="John" required>
+                </div>
+                <div class="form-group">
+                    <label>Last Name:</label>
+                    <input type="text" id="lastName" value="Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" id="email" value="test@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone:</label>
+                    <input type="tel" id="phone" value="1234567890" required>
+                </div>
+                <button type="button" onclick="generateCurl()">Generate cURL for This Data</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Generated cURL Output -->
+    <div id="generatedCurl" style="display:none; margin-top: 20px;">
+        <h3>Generated cURL Command:</h3>
+        <pre id="generatedCurlText"></pre>
+        <button onclick="copyGenerated()">Copy Generated Command</button>
+    </div>
+
+    <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px;">
+        <h3>🔧 How to Fix CORS (For Your Developer)</h3>
+        <p>Add these headers to your API server:</p>
+        <pre>Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST, GET, OPTIONS
+Access-Control-Allow-Headers: Content-Type</pre>
+        
+        <h4>Express.js Example:</h4>
+        <pre>app.use(cors({
+  origin: ['https://yourdomain.com', 'http://localhost:3000'],
+  methods: ['POST', 'GET', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));</pre>
+    </div>
+
+    <script>
+        function copyCurl() {
+            const curlText = document.getElementById('curlCommand').textContent;
+            navigator.clipboard.writeText(curlText).then(() => {
+                alert('cURL command copied to clipboard!');
+            });
+        }
+
+        function generateCurl() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+
+            const curlCommand = `curl -X POST https://vanurmedia.in/api/v1/leadChain/webhooks \\
+-H "Content-Type: application/json" \\
+-d '{
+  "firstName": "${firstName}",
+  "lastName": "${lastName}",
+  "email": "${email}",
+  "phone": "${phone}"
+}'`;
+
+            document.getElementById('generatedCurlText').textContent = curlCommand;
+            document.getElementById('generatedCurl').style.display = 'block';
+        }
+
+        function copyGenerated() {
+            const generatedText = document.getElementById('generatedCurlText').textContent;
+            navigator.clipboard.writeText(generatedText).then(() => {
+                alert('Generated cURL command copied to clipboard!');
+            });
+        }
+
+        // Show the form initially
+        document.getElementById('dataForm').style.display = 'block';
+    </script>
+</body>
+</html>
